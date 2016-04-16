@@ -14,6 +14,7 @@ var app = angular.module('votingRecord', []);
 
 app.controller('MainController', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
   $scope.modalVoteIndex = -1;
+  $scope.voteFilter = '';
 
   $scope.toggleModal = function (index) {
     $scope.modalVoteIndex = index;

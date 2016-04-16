@@ -1,19 +1,34 @@
-/*.navbar-inverse,
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
+a, a:focus, a:hover,
+.form-group.is-focused label,
+.form-group.is-focused label.control-label {
+    color: #AD2003;
+}
+
+.navbar.navbar-inverse,
+.btn-group-raised .btn.btn-primary,
+.btn-group-raised .input-group-btn .btn.btn-primary,
+.btn.btn-fab.btn-primary, .btn.btn-raised.btn-primary,
+.input-group-btn .btn.btn-fab.btn-primary,
+.input-group-btn .btn.btn-raised.btn-primary {
     background-color: #AD2003;
 }
 
-.navbar-inverse .navbar-brand,
-.navbar-inverse .navbar-nav>li>a {
-    color: white;
+.form-group.is-focused .form-control {
+    outline: 0;
+    background-image: -webkit-gradient(linear,left top,left bottom,from(#AD2003),to(#AD2003)),-webkit-gradient(linear,left top,left bottom,from(#D2D2D2),to(#D2D2D2));
+    background-image: -webkit-linear-gradient(#AD2003,#AD2003),-webkit-linear-gradient(#D2D2D2,#D2D2D2);
+    background-image: -o-linear-gradient(#AD2003,#AD2003),-o-linear-gradient(#D2D2D2,#D2D2D2);
+    background-image: linear-gradient(#AD2003,#AD2003),linear-gradient(#D2D2D2,#D2D2D2);
+    -webkit-background-size: 100% 2px,100% 1px;
+    background-size: 100% 2px,100% 1px;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    -webkit-transition-duration: .3s;
+    -o-transition-duration: .3s;
+    transition-duration: .3s;
 }
 
-.navbar-inverse .navbar-collapse,
-.navbar-inverse .navbar-form {
-    border-color: #CC2300;
+.about-photo {
+    width: 135px;
+    margin-right: 11px;
 }
-
-.navbar-inverse .navbar-toggle .icon-bar {
-    background-color: white;
-}*/
