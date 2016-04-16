@@ -4,16 +4,24 @@ var MAPPINGS = {
   2: 'type',
   3: 'vote',
   4: 'decision',
-  5: 'count'
+  5: 'count',
+  6: 'details'
 }
+
+$.material.init();
 
 var app = angular.module('votingRecord', []);
 
-app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
+app.controller('MainController', ['$scope', '$http', '$sce', function ($scope, $http, $sce) {
+  $scope.modalVoteIndex = -1;
+
+  $scope.toggleModal = function (index) {
+    $scope.modalVoteIndex = index;
+    angular.element('#voteModal').modal('toggle');
+  }
+
   var load = function() {
     $http.get(URL).then(function (response) {
-
-      console.log(response.data.feed.entry);
       $scope.votes = [];
 
       var flatData = response.data.feed.entry;
@@ -26,7 +34,11 @@ app.controller('MainController', ['$scope', '$http', function ($scope, $http) {
         if(cell['col'] === '1')
           $scope.votes.push({});
 
-        $scope.votes[+cell['row'] - 2][MAPPINGS[cell['col']]] = cell['$t'];
+        if(cell['col'] === '6') {
+          $scope.votes[+cell['row'] - 2][MAPPINGS[cell['col']]] = $sce.trustAsHtml(cell['$t']);
+        } else {
+          $scope.votes[+cell['row'] - 2][MAPPINGS[cell['col']]] = cell['$t'];
+        }
       }
     });
   };
