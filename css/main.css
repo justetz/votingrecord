@@ -32,3 +32,10 @@ a, a:focus, a:hover,
     width: 135px;
     margin-right: 11px;
 }
+
+a.text-muted {
+    color: #eee;
+}
+a.text-muted:hover {
+    color: #aaa;
+}
