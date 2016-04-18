@@ -48,7 +48,7 @@
           <thead>
             <tr>
               <th>Date</th>
-              <th>Type</th>
+              <th>Motion</th>
               <th>My vote</th>
               <th>Senate's decision</th>
               <th>Vote count</th>
@@ -57,7 +57,7 @@
           <tbody>
             <tr ng-repeat="v in votes | filter:voteFilter" ng-click="toggleModal($index)">
               <td ng-bind="v.date"></td>
-              <td ng-bind="v.type"></td>
+              <td ng-bind="v.desc"></td>
               <td ng-bind="v.vote"></td>
               <td ng-bind="v.decision"></td>
               <td ng-bind="v.count"></td>
@@ -83,7 +83,7 @@
         </div>
         <div class="modal-body" ng-repeat="v in votes" ng-if="$index === modalVoteIndex">
           <p><strong>Date:</strong> {{v.date}}</p>
-          <p><strong>Type:</strong> {{v.type}}</p>
+          <p><strong>Motion:</strong> {{v.desc}}</p>
           <p><strong>My vote:</strong> {{v.vote}}</p>
           <p><strong>Senate's decision:</strong> {{v.decision}}</p>
           <p><strong>Vote count:</strong> {{v.count}}</p>

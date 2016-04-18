@@ -1,7 +1,7 @@
 var URL = 'https://spreadsheets.google.com/feeds/cells/1GdBFj_y4QXNt8H_ayvtBd9MBGoB9Unne7H9rwcHlRbE/od6/public/values?alt=json';
 var MAPPINGS = {
   1: 'date',
-  2: 'type',
+  2: 'desc',
   3: 'vote',
   4: 'decision',
   5: 'count',
