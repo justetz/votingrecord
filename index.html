@@ -57,7 +57,7 @@
           </thead>
           <tbody>
             <tr ng-repeat="v in votes | filter:voteFilter | orderBy:['-date','-order']" ng-click="toggleModal(v)"
-                ng-class="{'info': shouldBeHighlighted(v)}">
+                ng-class="{'info': shouldBeHighlighted(v)}" class="pointer">
               <td ng-bind="v.date | date:'longDate':'+0000'"></td>
               <td ng-bind="v.order + 1"></td>
               <td ng-bind="v.desc"></td>

@@ -39,3 +39,7 @@ a.text-muted {
 a.text-muted:hover {
     color: #aaa;
 }
+
+.pointer {
+    cursor: pointer;
+}
